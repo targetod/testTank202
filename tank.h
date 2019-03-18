@@ -3,6 +3,14 @@
 
 #include <string>
 
+class Bullet
+{
+    std::string m_material;
+public:
+    Bullet(): m_material("wooden") { }
+};
+
+
 struct Point
 {
     int x;
