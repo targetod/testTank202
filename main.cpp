@@ -17,6 +17,7 @@ int main()
 
    // branch has been created
 
+   cout << "branch" <<endl;
 
    return 0;
 }
