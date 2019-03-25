@@ -16,8 +16,6 @@ int main()
    game.start();
 
 
-   //A.add(B);
-   //A + B;
    return 0;
 }
 
