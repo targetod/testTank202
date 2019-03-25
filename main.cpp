@@ -16,7 +16,9 @@ int main()
    game.start();
 
    // commit to master
+   // branch has been created
 
+   cout << "branch" <<endl;
 
    return 0;
 }
