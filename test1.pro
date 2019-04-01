@@ -19,7 +19,8 @@ SOURCES += \
     fileworker.cpp \
     tank.cpp \
     game.cpp \
-    davinci.cpp
+    davinci.cpp \
+    list.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -30,7 +31,8 @@ HEADERS += \
     fileworker.h \
     tank.h \
     game.h \
-    davinci.h
+    davinci.h \
+    list.h
 
 DISTFILES += \
     HW
