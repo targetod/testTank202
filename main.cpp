@@ -14,19 +14,19 @@ using namespace std;
 
 #include "list.h"
 
+void showGlobal ()
+{
+    static int global = 0;
+    cout << global <<endl;
+    global ++;
+}
+
 int main()
 {
-    {
-        List lst;
-        lst.insertData(1);
-        lst.insertData(2);
-        lst.insertData(3);
-        lst.insertData(20);
-        lst.showData();
-    }
 
-  // Game game;
-  // game.start();
+
+   Game game;
+   game.start();
 
    // commit to master
    // branch has been created

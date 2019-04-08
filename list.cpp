@@ -55,3 +55,32 @@ uint32_t List::size()
 {
     return m_size;
 }
+
+Tank* List::getNextTank(Tank * pTank)
+{
+    static Tank * pCurTank = nullptr;
+    static Node * pCurNode = m_pBegin;
+
+    if (pCurNode != nullptr)
+    {
+        pCurTank = &(pCurNode->val);
+    }
+
+    if (pTank != nullptr)
+    {
+        pCurNode = pCurNode->pNext;
+
+        if (pCurNode != nullptr)
+        {
+            pCurTank = &(pCurNode->val);
+        }
+        else
+        {
+            pCurTank = nullptr;
+            pCurNode = m_pBegin;
+        }
+
+    }
+    return pCurTank;
+}
+

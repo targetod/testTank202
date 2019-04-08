@@ -25,6 +25,8 @@ public:
     void insertData(Tank val);
     void showData();
     uint32_t size();
+
+    Tank* getNextTank(Tank * pTank);
 };
 
 #endif // LIST_H

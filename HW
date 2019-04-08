@@ -37,6 +37,10 @@ hW9
 // list operator [i]  OR getNextElem()
 // fix Game
 
+hw10
+// fix   m_painter.draw(m_tankList);
+
+
 
 
 
