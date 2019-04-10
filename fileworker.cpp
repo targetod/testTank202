@@ -10,6 +10,7 @@ FileWorker::FileWorker(){
    strcpy(m_fileName, "temp.txt");
    strcpy(m_data, "");
    cout << "Constructor" <<endl;
+
 }
 
 

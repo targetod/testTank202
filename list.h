@@ -26,7 +26,7 @@ public:
     void showData();
     uint32_t size();
 
-    Tank* getNextTank(Tank * pTank);
+    Tank* getNextTank(Tank * pTank) const;
 };
 
 #endif // LIST_H

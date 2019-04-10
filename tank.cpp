@@ -17,6 +17,7 @@ Tank::Tank(int hp, int dmg, std::string  name) :
     m_position.x = rand()%50;
     m_position.y = rand()%50;
 
+
    // m_pWeapon = new char[50];
    // strcpy(m_pWeapon, "miniGun");
 
@@ -27,6 +28,8 @@ Tank::Tank(const Tank & otherTank)
     this->m_hp = otherTank.m_hp;
     this->m_demage = otherTank.m_demage;
     this->m_name = otherTank.m_name; // ???
+    this->m_position = otherTank.m_position;
+
     cout << "Copy Constructor" << endl;
 }
 

@@ -13,6 +13,7 @@ List::List() :
 
 void List::insertData(Tank val)
 {
+    val.showPosition();
     m_size++;
     m_pTemp = new Node(val);
     if (m_pBegin == nullptr)
@@ -56,7 +57,7 @@ uint32_t List::size()
     return m_size;
 }
 
-Tank* List::getNextTank(Tank * pTank)
+Tank* List::getNextTank(Tank * pTank) const
 {
     static Tank * pCurTank = nullptr;
     static Node * pCurNode = m_pBegin;

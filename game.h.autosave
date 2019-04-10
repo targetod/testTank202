@@ -17,6 +17,8 @@ class Game
     List m_tankList;
 
     Davinci m_painter;
+    
+    static int val;
 
 public:
     void start();

@@ -40,7 +40,6 @@ void Game::start()
        // m_painter.draw(m_pTanks, NUM_TANKS);
         m_painter.draw(m_tankList);
 
-
        // m_pTanks[0].show();
        // m_pTanks[0] = m_pTanks[0] + 20;
        // m_pTanks[0] += 20;

@@ -33,6 +33,21 @@ void Davinci::draw(const Tank* const pTanks,const int N)
     Sleep(1000);
 }
 
+void Davinci::draw(const List & lstTank)
+{
+    system("cls");
+    Tank* pCurTank = lstTank.getNextTank(nullptr); // get first tank
+    while (pCurTank != nullptr)
+    {
+        Point coord = pCurTank ->getCoord();
+        gotoxy(coord.x, coord.y);
+        cout << '#';
+
+        pCurTank = lstTank.getNextTank(pCurTank); // get next tank
+    }
+    Sleep(1000);
+}
+
 
 
 
