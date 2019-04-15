@@ -25,6 +25,10 @@ class Tank
     std::string  m_name;
     //char * m_pWeapon;
 
+    static char* m_pClassName; // Tank
+public:
+    static int m_numOfTanks;
+
  // name
 public:
     Tank(int hp = 100, int dmg = 50, std::string name = "tank 0"  );

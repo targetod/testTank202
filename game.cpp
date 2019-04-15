@@ -2,7 +2,7 @@
 
 
 
-
+#include <iostream>
 
 
 Game::Game() : m_isContinue(true)
@@ -11,7 +11,9 @@ Game::Game() : m_isContinue(true)
     //m_pTanks = createTanks(NUM_TANKS);
     m_tankList.insertData( Tank(100,30,"T1") );
     m_tankList.insertData( Tank(100,20,"T2") );
+    //std::cout << Tank::m_numOfTanks << std::endl;
     m_tankList.insertData( Tank(100,20,"T3") );
+    //std::cout << Tank::m_numOfTanks << std::endl;
 }
 
 Game::~Game()
@@ -39,7 +41,6 @@ void Game::start()
 
        // m_painter.draw(m_pTanks, NUM_TANKS);
         m_painter.draw(m_tankList);
-
 
        // m_pTanks[0].show();
        // m_pTanks[0] = m_pTanks[0] + 20;

@@ -3,6 +3,9 @@
 #include <cstring>
 using namespace  std;
 
+char* Tank::m_pClassName = "Tank";
+int Tank::m_numOfTanks = 0;
+
 void Tank::move()
 {
     int moveVectorX = rand()%3 -1;
@@ -14,9 +17,12 @@ void Tank::move()
 Tank::Tank(int hp, int dmg, std::string  name) :
     m_hp(hp), m_demage(dmg), m_name(name)
 {
+    m_numOfTanks++;
+
     m_position.x = rand()%50;
     m_position.y = rand()%50;
 
+    cout<<"Name of class:" << m_pClassName<<endl;
 
    // m_pWeapon = new char[50];
    // strcpy(m_pWeapon, "miniGun");
@@ -31,6 +37,8 @@ Tank::Tank(const Tank & otherTank)
     this->m_position = otherTank.m_position;
 
     cout << "Copy Constructor" << endl;
+
+    m_numOfTanks++;
 }
 
 Tank::~Tank()
@@ -38,6 +46,7 @@ Tank::~Tank()
     cout << "Destuctor for T, x = ";
     cout << m_position.x<<endl;
 
+    m_numOfTanks--;
     //delete [] m_pWeapon;
 }
 

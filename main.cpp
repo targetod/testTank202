@@ -23,10 +23,9 @@ void showGlobal ()
 
 int main()
 {
-
-
-   Game game;
-   game.start();
+   //Game::getInstance().start();
+    Game& game = Game::getInstance();
+    game.start();
 
 
    // commit to master
