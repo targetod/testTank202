@@ -1,0 +1,34 @@
+[build_requires]
+
+[settings]
+    os=Windows
+    os_build=Windows
+    arch=x86_64
+    arch_build=x86_64
+    compiler=gcc
+    compiler.version=7.3
+    compiler.libcxx=libstdc++11
+    build_type=Release
+
+[options]
+[env]
+
+
+
+
+
+
+
+
+# Where is our C compiler
+#CC=C:\Qt\Tools\mingw730_64\bin\x86_64-w64-mingw32-gcc
+# Where is our CPP compiler
+#CXX=C:\Qt\Tools\mingw730_64\bin\x86_64-w64-mingw32-g++
+
+#conan install .  -s compiler=gcc -s compiler.libcxx=libstdc++11 -s compiler.version=7.3 --build=missing
+#conan remote add conan-center https://api.bintray.com/conan/conan/conan-center --insert
+#  conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
+# conan install .  --profile profile.txt --build=missing
+#install cmake
+
+# bug in openal   if self.settings.compiler != 'Visual Studio' and self.settings.os != 'Windows':

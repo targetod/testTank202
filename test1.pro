@@ -3,6 +3,9 @@ QT -= gui
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
+CONFIG += conan_basic_setup
+include(conanbuildinfo.pri)
+
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -20,7 +23,8 @@ SOURCES += \
     tank.cpp \
     game.cpp \
     davinci.cpp \
-    list.cpp
+    list.cpp \
+    moderntank.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -32,7 +36,8 @@ HEADERS += \
     tank.h \
     game.h \
     davinci.h \
-    list.h
+    list.h \
+    moderntank.h
 
 DISTFILES += \
     HW

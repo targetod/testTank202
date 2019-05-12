@@ -23,6 +23,7 @@ Tank::Tank(int hp, int dmg, std::string  name) :
     m_position.y = rand()%50;
 
     cout<<"Name of class:" << m_pClassName<<endl;
+    cout << "Tank constr" << endl;
 
    // m_pWeapon = new char[50];
    // strcpy(m_pWeapon, "miniGun");

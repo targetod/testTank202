@@ -13,7 +13,7 @@ class Game
     bool m_isContinue;  // start game
     //Tank* m_pTanks; // pointer to tank's array
     List m_tankList;
-    Davinci m_painter;
+    Davinci * m_painter;
 
     static int val;
 

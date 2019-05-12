@@ -14,15 +14,19 @@ Game::Game() : m_isContinue(true)
     //std::cout << Tank::m_numOfTanks << std::endl;
     m_tankList.insertData( Tank(100,20,"T3") );
     //std::cout << Tank::m_numOfTanks << std::endl;
+
+    m_painter = new DavinciSFML();
 }
 
 Game::~Game()
 {
    //deleteTanks(m_pTanks);
+    delete m_painter;
 }
 
 void Game::start()
 {
+    m_painter->drawBoard();
 
     while(m_isContinue)
     {
@@ -39,8 +43,8 @@ void Game::start()
             pCurTank = m_tankList.getNextTank(pCurTank);
         }
 
-       // m_painter.draw(m_pTanks, NUM_TANKS);
-        m_painter.draw(m_tankList);
+       // m_painter->draw(m_pTanks, NUM_TANKS);
+        m_painter->draw(m_tankList);
 
        // m_pTanks[0].show();
        // m_pTanks[0] = m_pTanks[0] + 20;

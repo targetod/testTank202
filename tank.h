@@ -19,6 +19,7 @@ struct Point
 
 class Tank
 {
+protected:
     int m_hp;
     int m_demage;
     Point m_position;
@@ -33,17 +34,20 @@ public:
 public:
     Tank(int hp = 100, int dmg = 50, std::string name = "tank 0"  );
     Tank(const Tank & otherTank);
-    ~Tank();
+    virtual ~Tank();
 
     Tank& operator= (const Tank & otherTank);
     Tank operator+ (int hp);
 
     void shoot(Tank & otherTank);
-    void show() const;
+    virtual void show() const;
     void showPosition() const;
     void move();
 
     Point getCoord() const;
+
+    void changeHP(int hp) { m_hp = hp; }
+    int getHP() { return m_hp; }
 
 };
 
