@@ -85,6 +85,32 @@ void DavinciSFML::draw(const List & lstTank)
     Sleep(1000);
 }
 
+void DavinciSFML::draw(const std::vector<Tank> &vTank)
+{
+    m_window.clear();
+    int N = vTank.size();
+    for(int i = 0 ; i < N ; i++)
+    {
+        Point coord = vTank[i].getCoord();
+
+        sf::CircleShape shape(10.f);  // tank form
+        // set the shape color to green
+        shape.setFillColor(sf::Color(100, 250, 50));
+
+        // set the absolute position of the entity
+        shape.setPosition(coord.x, coord.y);
+
+        // move the entity relatively to its current position
+        //shape.move(5.f, 5.f);
+        m_window.draw(shape);
+
+    }
+
+    m_window.display();
+
+    Sleep(1000);
+}
+
 
 DavinciSFML::~DavinciSFML(){
    m_window.close();

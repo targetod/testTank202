@@ -10,10 +10,10 @@ class Davinci
 {
 public:
 
-    virtual void drawBoard()=0;
+    virtual void drawBoard() = 0;
     virtual void draw(const Tank* const pTanks, const int N)=0;
     virtual void draw(const List & lstTank)=0;    //  draw(Obj);
-
+    virtual void draw(const std::vector<Tank> & vTank) = 0;
     virtual ~Davinci() {}
 };
 
@@ -24,6 +24,11 @@ public:
     void drawBoard() {/*empty*/}
     void draw(const Tank* const pTanks, const int N);
     void draw(const List & lstTank);    //  draw(Obj);
+    void draw(const std::vector<Tank> & vTank)
+    {
+        // todo
+    }
+
     //void draw(const List * lstTank);  //  draw(&Obj);
 private:
     void gotoxy(int x, int y);
@@ -42,9 +47,11 @@ public:
     void drawBoard();
     void draw(const Tank* const pTanks, const int N);
     void draw(const List & lstTank);    //  draw(Obj);
+    void draw(const std::vector<Tank> & vTank);
+
     //void draw(const List * lstTank);  //  draw(&Obj);
 private:
-    void gotoxy(int x, int y);
+
 };
 
 

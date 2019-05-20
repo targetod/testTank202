@@ -43,6 +43,32 @@ hw10
 //hw11
 slide 8 dz 7
 
+/-------------------
+1.  Go to 
+https://github.com/targetod/testTank202
+2. Save link (copy)
+https://github.com/targetod/testTank202.git
+3. Create folder for project
+4. Clone project into folder
+git clone https://github.com/targetod/testTank202.git
+5. Go to conan and install lib 
+C:\Users\oneuimin\QtPrjts\T2\testTank202>conan install . --profile profile.txt --build=missing
+/--------------------
+
+
+//hw12
+UML tanks draw
+
+// РГР
+1. реалізації стрільби в танках і їх видалення при попаданні
+2. використання логера в программі
+
+
+- STL
+- наслідування і поліморфізму (Брідж)
+- використання логера в програмі
+
+
 
 
 
